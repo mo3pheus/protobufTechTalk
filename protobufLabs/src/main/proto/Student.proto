@@ -1,0 +1,22 @@
+syntax = "proto3";
+package egen.solutions.protocol.buffers;
+
+message Student{
+	string name = 1;
+	string address = 2;
+	int64 studentId = 3;
+	map<string,int64> booksDue = 4;
+	repeated Book booksOwned = 5;
+	repeated CheckOut booksOnLoan = 6;
+	
+	message Book{
+		string bookName = 1;
+		string author = 2;
+	}
+	
+	message CheckOut{
+		string bookName = 1;
+		string studentName = 2;
+		int64 dueDate = 3;
+	}
+ }

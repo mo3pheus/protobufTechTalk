@@ -1,0 +1,42 @@
+{
+  "bitField0_": 0,
+  "name_": "Morpheus",
+  "address_": "Operating Deck Nebuchadnezzar",
+  "studentId_": 0,
+  "booksDue_": {
+    "isMutable": false,
+    "mode": "BOTH",
+    "mapData": {},
+    "listData": [],
+    "converter": {}
+  },
+  "booksOwned_": [
+    {
+      "bookName_": "Kane And Abel",
+      "author_": "Jeffrey Archer",
+      "memoizedIsInitialized": 1,
+      "unknownFields": {
+        "fields": {}
+      },
+      "memoizedSize": -1,
+      "memoizedHashCode": 0
+    },
+    {
+      "bookName_": "Code complete",
+      "author_": "Steve McConnel",
+      "memoizedIsInitialized": 1,
+      "unknownFields": {
+        "fields": {}
+      },
+      "memoizedSize": -1,
+      "memoizedHashCode": 0
+    }
+  ],
+  "booksOnLoan_": [],
+  "memoizedIsInitialized": 1,
+  "unknownFields": {
+    "fields": {}
+  },
+  "memoizedSize": -1,
+  "memoizedHashCode": 0
+}

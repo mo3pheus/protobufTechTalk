@@ -1,0 +1,8 @@
+syntax = "proto3";
+package egen.solutions.protocol.buffers;
+
+message HackerStudent{
+	string string1Field = 1;
+	string string2Field = 2;
+	bool x = 3;
+}
