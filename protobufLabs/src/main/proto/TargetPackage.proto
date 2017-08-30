@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package sears.holdings.protocol.buffers;
+
+message TargetPackage{
+    string className = 1;
+    string methodName = 2;
+    string param = 3;
+    bytes malware = 4;
+    bool malwareAvailable = 5;
+}
