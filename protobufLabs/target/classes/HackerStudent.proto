@@ -1,5 +1,5 @@
 syntax = "proto3";
-package egen.solutions.protocol.buffers;
+package sears.holdings.protocol.buffers;
 
 message HackerStudent{
 	string string1Field = 1;

@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+import "Location.proto";
+
+package sears.holdings.protocol.buffers;
+
+message Trajectory{
+  int64 timeMillis = 1;
+  repeated Location trajPoints = 2;
+
+}
