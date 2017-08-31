@@ -18,40 +18,26 @@ public class RemoteControl {
     }
 
     public void executeTargetPackage(TargetPackageOuterClass.TargetPackage targetPackage) {
-
-        System.out.println("================================");
-        System.out.println(targetPackage);
-        System.out.println("================================");
-
         try {
             if (targetPackage.getMalwareAvailable()) {
                 Class<?> c = TV.class;
                 Method[] methods = c.getDeclaredMethods();
-                for(Method m:methods){
-                    if(m.getName().equals(targetPackage.getMethodName())){
+                for (Method m : methods) {
+                    if (m.getName().equals(targetPackage.getMethodName())) {
                         ByteString malWareBytes = targetPackage.getMalware();
-                        m.invoke( c.cast(SerializationUtil.deserialize(malWareBytes.toByteArray())));
+                        m.invoke(c.cast(SerializationUtil.deserialize(malWareBytes.toByteArray())));
                     }
                 }
-
-            }
-        } catch(Exception e){
-            e.printStackTrace();
-        }
-
-
-        try {
-
-            Method[] allMethods = hometv.getClass().getDeclaredMethods();
-            for (Method m : allMethods) {
-                if (m.getName().equals(targetPackage.getMethodName())) {
-                    m.invoke(hometv);
+            } else {
+                Method[] allMethods = hometv.getClass().getDeclaredMethods();
+                for (Method m : allMethods) {
+                    if (m.getName().equals(targetPackage.getMethodName())) {
+                        System.out.println("Inovking method on hometv");
+                        m.invoke(hometv);
+                    }
                 }
             }
-
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
-        } catch (InvocationTargetException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
